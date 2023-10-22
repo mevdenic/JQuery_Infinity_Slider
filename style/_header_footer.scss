@@ -1,0 +1,23 @@
+.header, .footer{
+    background-color: $greyColor;
+}
+
+.header-left{
+    grid-column: 13 / 9; 
+    grid-row: 1 / 2; 
+}
+
+.header-right{
+    grid-column: 9 / 1;
+    grid-row: 1 / 2; 
+}
+
+.header-left, .header-right{
+    border-radius: 0px 0px $borderRad $borderRad;
+}
+
+.footer{
+    border-radius: $borderRad $borderRad 0px 0px;
+    grid-column: 13 / 1; 
+    grid-row: 6 / 7; 
+}

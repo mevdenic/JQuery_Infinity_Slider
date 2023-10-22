@@ -1,0 +1,45 @@
+@mixin buttonBackgroundStyle{
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+};
+
+.button-container{
+    grid-column: 6 / 5;
+    grid-row: 4 / 5;
+    max-height: 130px;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    .buttons{
+        background-color: white;
+        border: 1px solid $greyColor;
+        border-radius: $borderRad;
+        transition: 0.5s;
+        height: 60px;
+        width: 60px;
+        padding: 0;
+    }
+}
+
+.button-left{
+    background-image: url("../images/arrow-gray-left.png");
+    @include buttonBackgroundStyle;
+    
+    &:hover{
+        background-image: url("../images/arrow-blue-left.png");
+        border: 1px solid $blueColor;
+        cursor: pointer;
+    }
+}
+
+.button-right{
+    background-image: url("../images/arrow-gray-right.png");
+    @include buttonBackgroundStyle;
+    
+    &:hover{
+        background-image: url("../images/arrow-blue-right.png");
+        border: 1px solid $blueColor;
+        cursor: pointer;
+    }
+}
